@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Set NARA Catalog API key</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+    textarea, button, input[type=file] { font-size: 16px; width: 100%; box-sizing: border-box; margin: 0.4rem 0; padding: 0.8rem; }
+    textarea { min-height: 8rem; }
+    button { background: #14181F; color: #F6F0E2; border: 0; }
+    .note { color: #333; }
+    .warn { background: #F6F0E2; padding: 0.8rem; }
+    #status { min-height: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Set NARA Catalog API key</h1>
+  <p class="warn">If you see a black terminal, this is the wrong page. Open this URL in <strong>Safari</strong> (not Telegram’s in-app browser).</p>
+  <p class="note">Paste here, or choose a one-line text file. It stays on this Mac in a private file. Do not screenshot. Do not send the key in chat. Apple Passwords stays the durable copy.</p>
+  <form id="f" method="post" action="/set-nara-key" enctype="multipart/form-data">
+    <label for="key">NARA Catalog API key</label>
+    <textarea id="key" name="key" rows="6" autocapitalize="none" autocorrect="off" spellcheck="false"></textarea>
+    <button type="button" id="paste">Paste from clipboard</button>
+    <label for="keyfile">Or upload a text file that contains only the key</label>
+    <input id="keyfile" name="keyfile" type="file" accept="text/plain,.txt,.env">
+    <button type="submit">Save on this Mac</button>
+    <p id="status"></p>
+  </form>
+  <script>
+    const box = document.getElementById("key");
+    const status = document.getElementById("status");
+    box.addEventListener("touchstart", () => box.focus(), { passive: true });
+    document.getElementById("paste").addEventListener("click", async () => {
+      status.textContent = "";
+      try {
+        const text = await navigator.clipboard.readText();
+        if (!text.trim()) {
+          status.textContent = "Clipboard was empty. In Safari, copy the key again, then tap Paste.";
+          return;
+        }
+        box.value = text.trim();
+        status.textContent = "Pasted. Tap Save. The key is not shown back to you later.";
+      } catch (err) {
+        status.textContent = "This browser blocked clipboard. Use Safari, or upload a text file.";
+      }
+    });
+  </script>
+</body>
+</html>

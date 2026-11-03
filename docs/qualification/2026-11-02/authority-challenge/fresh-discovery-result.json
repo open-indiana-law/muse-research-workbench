@@ -1,0 +1,823 @@
+{
+  "cases": [
+    {
+      "question": "In an ordinary Indiana landlord-tenant possession case, what opportunity does the occupant have to present defenses before possession is ordered? Find and open relevant statutory text and an Indiana appellate opinion. Write a 150–220 word research note explaining what support and legal weight the opinion provides, which factual and procedural features limit its usefulness, and what remains unresolved. Distinguish preliminary possession from final resolution where the sources do. Identify source dates and links. Use at most eight source calls. Exclude emergency procedures. Use plain paraphrases unless quoting exact wording. If evidence is incomplete, say so without inventing authority.",
+      "turns": [
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": "Your ordinary possession question is in hand — pulling the statute and a matching appellate opinion.",
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_932c5444-7998-4980-a767-8ad0d744489a",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_search",
+                        "arguments": "{\"limit\":5,\"query\":\"eviction possession landlord tenant hearing\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": null,
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_82eaa212-b784-4470-9a42-035ee6d9b544",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_search",
+                        "arguments": "{\"limit\":5,\"query\":\"possession ejectment trial damages tenant\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": "Those searches were too narrow — broadening to the ejectment and possession statutes.",
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_ed1a9aeb-7d3f-4981-8eff-b319a79d8496",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_search",
+                        "arguments": "{\"limit\":5,\"query\":\"ejectment action possession hearing judgment\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": null,
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_144e4c15-5499-4cbd-ae8d-fcdeb2181f29",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_get_section",
+                        "arguments": "{\"section_id\":\"32-30-3-1\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": "Found the opening filing provision — now locating the companion procedure on defending possession.",
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_9606fd6e-ea50-4151-b3a3-bef968c33bb5",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_search",
+                        "arguments": "{\"limit\":5,\"query\":\"immediate possession hearing notice defendant ejectment\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": null,
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_c7b1fb68-44ce-4b38-b32b-8ae7b6bafe88",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_search",
+                        "arguments": "{\"limit\":10,\"query\":\"order to show cause possession ejectment\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": null,
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_d95ef108-47b3-4d45-820f-204ccd8474e6",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_get_section",
+                        "arguments": "{\"section_id\":\"32-30-3-2\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "tool_calls",
+                "index": 0,
+                "message": {
+                  "content": "I've confirmed occupants get a show-cause hearing — now finding an appellate opinion that applies that procedure.",
+                  "refusal": null,
+                  "tool_calls": [
+                    {
+                      "id": "call_cdf13afa-39f3-43b4-ab36-6d2a830218c7",
+                      "type": "function",
+                      "function": {
+                        "name": "ic_cases_citing",
+                        "arguments": "{\"limit\":10,\"section_id\":\"32-30-3-2\"}"
+                      }
+                    }
+                  ],
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        },
+        {
+          "response": {
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "message": {
+                  "content": "Research note — ordinary possession opportunity to be heard (emergency procedures excluded):\n\nThe retrieved ordinary ejectment/possession statute provides that after a plaintiff affidavit claiming entitlement and unlawful retention, the clerk issues an order directing the occupant to appear to dispute the affidavit or explain why possession should not transfer. The hearing may occur no earlier than five business days after service, and the order must advise the occupant that supporting affidavits may be filed, supporting testimony may be presented at the hearing, a written undertaking to stay delivery may be filed, and nonappearance can lead to a possession judgment for the plaintiff. This supports a pre-order opportunity to present defenses in the preliminary-possession phase, separate from any later final judgment, though the text read here alone does not fully detail trial, damages, or final merits procedures.\n\nAn indexed text-match search for that section returned, among others, Darrell E. Johnson v. Linda J. Larkins, Ind. Ct. App., filed 2023-06-27, docket 22A-EV-02844, listed as unpublished, and I-65 Plaza, LLC v. Indiana Grocery Group, LLC, filed 2021-03-31, listed as published. The opinion texts were not opened within the source-call limit, so no holding, reasoning, weight, facts, or preliminary-versus-final distinction can be reported from them, and a mention alone does not establish a holding.\n\nUnresolved: what defenses succeed, burden at the show-cause hearing, undertaking/bond practice, and final resolution scope remain unverified.\n\nSources: IC 32-30-3-2, unofficial copy snapshot 2026-06-23, requested as_of 2026-11-02, https://iga.in.gov/laws/ic/2026 — verify at the official source; indexed opinion leads via CourtListener extract — not a citator. Unofficial copy — verify at the official source — not legal advice — not a citator.\n",
+                  "refusal": null,
+                  "role": "assistant"
+                },
+                "logprobs": null
+              }
+            ]
+          }
+        }
+      ],
+      "source_calls": [
+        {
+          "tool": "ic_search",
+          "arguments": {
+            "limit": 5,
+            "query": "eviction possession landlord tenant hearing"
+          },
+          "result": {
+            "query": "eviction possession landlord tenant hearing",
+            "results": [
+              {
+                "section_id": "32-31-11-3",
+                "citation": "IC 32-31-11-3",
+                "heading": "Right of tenant to petition court for nondisclosure order; court order; timing of order; appellate court duties; pending eviction actions in residential eviction diversion programs",
+                "snippet": "...permit disclosure of any records in the [eviction] action, including the petition by the [landlord] for [possession] of the rental unit:\n(1) other than..."
+              },
+              {
+                "section_id": "32-31-11-4",
+                "citation": "IC 32-31-11-4",
+                "heading": "Eviction actions resolved before July 1, 2022, or for which order of nondisclosure not otherwise issued; right of tenant to petition court for nondisclosure order; required information; order or hearing; burden of proof",
+                "snippet": "...by the [landlord] for [possession] of the rental unit, in accordance with section 3 of this chapter.\n(b) If:\n(1) an [eviction] action is..."
+              }
+            ],
+            "flags": [],
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "tool": "ic_search",
+          "arguments": {
+            "limit": 5,
+            "query": "possession ejectment trial damages tenant"
+          },
+          "result": {
+            "query": "possession ejectment trial damages tenant",
+            "results": [
+              {
+                "section_id": "32-31-4-2",
+                "citation": "IC 32-31-4-2",
+                "heading": "Liability; abandoned property; court order allowing removal by landlord",
+                "snippet": "...2. (a) A landlord has no liability for loss or [damage] to a [tenant]'s personal property if the [tenant]'s personal property has..."
+              },
+              {
+                "section_id": "32-31-6-7.1",
+                "citation": "IC 32-31-6-7.1",
+                "heading": "Emergency order; criminal activity; materially false information",
+                "snippet": "...[damage]; or\n(2) the [tenant] provided materially false information to the landlord with the intent to induce the landlord into leasing or giving [possession]..."
+              },
+              {
+                "section_id": "32-31-3-12",
+                "citation": "IC 32-31-3-12",
+                "heading": "Return of deposits; deductions; liability",
+                "snippet": "...due the [tenant] and reasonable attorney's fees.\n(c) This section does not preclude the landlord or [tenant] from recovering other [damages] to which..."
+              },
+              {
+                "section_id": "32-31-6-6",
+                "citation": "IC 32-31-6-6",
+                "heading": "Emergency order",
+                "snippet": "...the following:\n(1) Return [possession] of the dwelling unit to the [tenant] if the [tenant] has been deprived of [possession] of the dwelling unit..."
+              },
+              {
+                "section_id": "32-30-4-1",
+                "citation": "IC 32-30-4-1",
+                "heading": "Additional actions authorized",
+                "snippet": "...[tenant] in [possession] only when the injury to the estate in reversion is adjudged:\n(1) to be equal to the value of the [tenant]..."
+              }
+            ],
+            "flags": [
+              "no section contained every word; results match some of the words, ranked by relevance"
+            ],
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "tool": "ic_search",
+          "arguments": {
+            "limit": 5,
+            "query": "ejectment action possession hearing judgment"
+          },
+          "result": {
+            "query": "ejectment action possession hearing judgment",
+            "results": [
+              {
+                "section_id": "32-30-3-1",
+                "citation": "IC 32-30-3-1",
+                "heading": "Action for ejectment or recovery of possession of real estate; plaintiff's affidavit",
+                "snippet": "...1. (a) This section applies to all [actions]:\n(1) in [ejectment]; or\n(2) for the recovery of [possession] of real estate.\n(b) At the..."
+              },
+              {
+                "section_id": "4-33-4-7",
+                "citation": "IC 4-33-4-7",
+                "heading": "Ejection or exclusion from facilities",
+                "snippet": "...person participating in a voluntary exclusion program, may petition the commission for a [hearing] on the person's [ejection] or exclusion under this section."
+              },
+              {
+                "section_id": "4-35-4-9",
+                "citation": "IC 4-35-4-9",
+                "heading": "Ejection or exclusion from facilities",
+                "snippet": "...person participating in a voluntary exclusion program, may petition the commission for a [hearing] on the person's [ejection] or exclusion under this section."
+              },
+              {
+                "section_id": "35-47-5-2",
+                "citation": "IC 35-47-5-2",
+                "heading": "Knife with a detachable blade",
+                "snippet": "...to manufacture, [possess], display, offer, sell, lend, give away, or purchase any knife with a detachable blade that may be [ejected] from the handle..."
+              },
+              {
+                "section_id": "32-30-8-12",
+                "citation": "IC 32-30-8-12",
+                "heading": "Restitution; possession; removal of tenant's personal property",
+                "snippet": "...12. (a) The court, after a [hearing] under this chapter, may grant a [judgment] of restitution or the [possession] of the property to the..."
+              }
+            ],
+            "flags": [
+              "no section contained every word; results match some of the words, ranked by relevance"
+            ],
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "tool": "ic_get_section",
+          "arguments": {
+            "section_id": "32-30-3-1"
+          },
+          "result": {
+            "section_id": "32-30-3-1",
+            "as_of": "2026-11-02",
+            "found": true,
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "flags": [],
+            "confidence": "high",
+            "session_acts": [],
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "compile_date_certain": true,
+            "version_id": "32-30-3-1",
+            "version_suffix": null,
+            "effective_from": null,
+            "effective_until": null,
+            "status": "active",
+            "heading": "Action for ejectment or recovery of possession of real estate; plaintiff's affidavit",
+            "text": "Sec. 1. (a) This section applies to all actions:\n(1) in ejectment; or\n(2) for the recovery of possession of real estate.\n(b) At the time of filing a complaint or at any time before judgment, a plaintiff may file with the clerk of the court in which the action is filed or pending an affidavit stating the following:\n(1) The plaintiff is entitled to possession of the property described in the complaint.\n(2) The defendant has unlawfully retained possession of the property described in the complaint.\n(3) The estimated value of the property described in the complaint.\n(4) The estimated rental value of the property described in the complaint.\n[Pre-2002 Recodification Citation: 32-6-1.5-1.]",
+            "amending_acts": [
+              "P.L.2-2002"
+            ],
+            "history_note": "As added by P.L.2-2002, SEC.15.",
+            "preamble_notes": [],
+            "pending_acts": [],
+            "code_edition_year": 2026,
+            "source_url": "https://iga.in.gov/laws/ic/2026",
+            "citation": "IC 32-30-3-1",
+            "version_signal": {
+              "domain": "code",
+              "color": "green",
+              "label": "Operative in this store on the as-of date; no loaded later clause.",
+              "as_of": "2026-11-02",
+              "year_banner": false,
+              "confirm_url": null,
+              "events": [],
+              "caption": "Unofficial store signal. Not a citator. Not legal advice. We do not certify.",
+              "latest_snapshot_year": 2026
+            }
+          }
+        },
+        {
+          "tool": "ic_search",
+          "arguments": {
+            "limit": 5,
+            "query": "immediate possession hearing notice defendant ejectment"
+          },
+          "result": {
+            "query": "immediate possession hearing notice defendant ejectment",
+            "results": [
+              {
+                "section_id": "32-30-3-8",
+                "citation": "IC 32-30-3-8",
+                "heading": "Return of possession to defendant; period for return; required surety; notice; proof of service",
+                "snippet": "...[hearing] on the order to show cause or before final judgment, and within the time fixed in the order of [possession], the [defendant] may..."
+              },
+              {
+                "section_id": "32-30-3-1",
+                "citation": "IC 32-30-3-1",
+                "heading": "Action for ejectment or recovery of possession of real estate; plaintiff's affidavit",
+                "snippet": "...1. (a) This section applies to all actions:\n(1) in [ejectment]; or\n(2) for the recovery of [possession] of real estate.\n(b) At the..."
+              },
+              {
+                "section_id": "32-35-2-9",
+                "citation": "IC 32-35-2-9",
+                "heading": "Order for possession before hearing; grounds",
+                "snippet": "...[possession] under this chapter before the [hearing] if probable cause appears that any of the following subdivisions apply:\n(1) The [defendant] gained [possession] of..."
+              },
+              {
+                "section_id": "32-35-2-29",
+                "citation": "IC 32-35-2-29",
+                "heading": "Taking immediate custody of property; exception for vehicle or boat used as defendant's dwelling",
+                "snippet": "...shall [immediately] take the property into custody if the property is in the [possession] or control of the [defendant] or the [defendant]'s agent..."
+              },
+              {
+                "section_id": "32-35-2-11",
+                "citation": "IC 32-35-2-11",
+                "heading": "Application to shorten time for show cause hearing",
+                "snippet": "...11. (a) If an order of [possession] was issued before a [hearing] under this chapter (or IC 34-1-9.1-4 or IC..."
+              }
+            ],
+            "flags": [
+              "no section contained every word; results match some of the words, ranked by relevance"
+            ],
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "tool": "ic_search",
+          "arguments": {
+            "limit": 10,
+            "query": "order to show cause possession ejectment"
+          },
+          "result": {
+            "query": "order to show cause possession ejectment",
+            "results": [
+              {
+                "section_id": "32-30-3-2",
+                "citation": "IC 32-30-3-2",
+                "heading": "Order to appear; order to show cause; requirements",
+                "snippet": "...[show] [cause] why the judge should not remove the defendant from the property and put the plaintiff in [possession]. The [order] to [show] [cause]..."
+              },
+              {
+                "section_id": "32-30-3-5",
+                "citation": "IC 32-30-3-5",
+                "heading": "Hearing on order to show cause; court determinations; prejudgment orders; appointment of receiver",
+                "snippet": "...[order] of [possession] in favor of the plaintiff if the defendant fails to appear at the hearing on the [order] to [show] [cause].\n(c..."
+              },
+              {
+                "section_id": "32-30-3-4",
+                "citation": "IC 32-30-3-4",
+                "heading": "Order for possession; expedited hearing; temporary restraining orders instead of order for possession",
+                "snippet": "...an [order] of [possession] under section 3 of this chapter, the court may, in addition to issuing an [order] to [show] [cause], issue temporary..."
+              },
+              {
+                "section_id": "32-30-3-8",
+                "citation": "IC 32-30-3-8",
+                "heading": "Return of possession to defendant; period for return; required surety; notice; proof of service",
+                "snippet": "...hearing on the [order] to [show] [cause] or before final judgment, and within the time fixed in the [order] of [possession], the defendant may..."
+              },
+              {
+                "section_id": "32-35-2-5",
+                "citation": "IC 32-35-2-5",
+                "heading": "Issuance of show cause order",
+                "snippet": "...controverting plaintiff's affidavit or to otherwise [show] [cause] why:\n(1) a prejudgment [order] for [possession] should not issue; and\n(2) the property should..."
+              },
+              {
+                "section_id": "35-47-5-2",
+                "citation": "IC 35-47-5-2",
+                "heading": "Knife with a detachable blade",
+                "snippet": "...to manufacture, [possess], display, offer, sell, lend, give away, or purchase any knife with a detachable blade that may be [ejected] from the handle..."
+              },
+              {
+                "section_id": "32-35-2-11",
+                "citation": "IC 32-35-2-11",
+                "heading": "Application to shorten time for show cause hearing",
+                "snippet": "...[possession] of the property was taken may apply to the court for an [order] shortening the time for hearing on the [order] to [show]..."
+              },
+              {
+                "section_id": "32-30-3-1",
+                "citation": "IC 32-30-3-1",
+                "heading": "Action for ejectment or recovery of possession of real estate; plaintiff's affidavit",
+                "snippet": "...1. (a) This section applies to all actions:\n(1) in [ejectment]; or\n(2) for the recovery of [possession] of real estate.\n(b) At the..."
+              },
+              {
+                "section_id": "32-35-2-24",
+                "citation": "IC 32-35-2-24",
+                "heading": "Effect of defendant's bond on show cause proceedings",
+                "snippet": "...If the defendant files an undertaking under section 22 of this chapter before the hearing of the [order] to [show] [cause], proceedings under the..."
+              },
+              {
+                "section_id": "32-35-2-7",
+                "citation": "IC 32-35-2-7",
+                "heading": "Notice to defendant",
+                "snippet": "...An [order] to [show] [cause] issued under section 5 of this chapter must inform the defendant that:\n(1) the defendant may:\n(A) file affidavits..."
+              }
+            ],
+            "flags": [
+              "no section contained every word; results match some of the words, ranked by relevance"
+            ],
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ]
+          }
+        },
+        {
+          "tool": "ic_get_section",
+          "arguments": {
+            "section_id": "32-30-3-2"
+          },
+          "result": {
+            "section_id": "32-30-3-2",
+            "as_of": "2026-11-02",
+            "found": true,
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "flags": [],
+            "confidence": "high",
+            "session_acts": [],
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "compile_date_certain": true,
+            "version_id": "32-30-3-2",
+            "version_suffix": null,
+            "effective_from": null,
+            "effective_until": null,
+            "status": "active",
+            "heading": "Order to appear; order to show cause; requirements",
+            "text": "Sec. 2. (a) Upon the filing of an affidavit described in section 1 of this chapter, the clerk shall issue an order for a time fixed by the judge directing the defendant to appear to controvert the affidavit or to show cause why the judge should not remove the defendant from the property and put the plaintiff in possession. The order to show cause must direct the time within which the order must be served on the defendant and set forth the date, time, and place for the hearing, which may take place no earlier than five (5) business days after the date of service on the defendant.\n(b) The order to show cause must state the following:\n(1) The defendant may file supporting affidavits with the court.\n(2) The defendant may appear and present supporting testimony at the hearing on the order to show cause.\n(3) The defendant may file with the court a written undertaking to stay the delivery of the property under this chapter.\n(4) The judge may issue a judgment of possession in favor of the plaintiff if the defendant fails to appear at the hearing.\n[Pre-2002 Recodification Citation: 32-6-1.5-2.]",
+            "amending_acts": [
+              "P.L.2-2002"
+            ],
+            "history_note": "As added by P.L.2-2002, SEC.15.",
+            "preamble_notes": [],
+            "pending_acts": [],
+            "code_edition_year": 2026,
+            "source_url": "https://iga.in.gov/laws/ic/2026",
+            "citation": "IC 32-30-3-2",
+            "version_signal": {
+              "domain": "code",
+              "color": "green",
+              "label": "Operative in this store on the as-of date; no loaded later clause.",
+              "as_of": "2026-11-02",
+              "year_banner": false,
+              "confirm_url": null,
+              "events": [],
+              "caption": "Unofficial store signal. Not a citator. Not legal advice. We do not certify.",
+              "latest_snapshot_year": 2026
+            }
+          }
+        },
+        {
+          "tool": "ic_cases_citing",
+          "arguments": {
+            "limit": 10,
+            "section_id": "32-30-3-2"
+          },
+          "result": {
+            "section_id": "32-30-3-2",
+            "citation": "IC 32-30-3-2",
+            "results": [
+              {
+                "cluster_id": "incourts--909587252",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Darrell E. Johnson v. Linda J. Larkins",
+                "date_filed": "2023-06-27",
+                "docket_id": "22A-EV-02844",
+                "precedential_status": "Unpublished",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2023-06-27",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "incourts--1463947540",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Richard A Colvin v. George M. Taylor",
+                "date_filed": "2021-04-15",
+                "docket_id": "21A-MF-00003",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2021-04-15",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "incourts--883168363",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "I-65 Plaza, LLC, et al. v. Indiana Grocery Group, LLC",
+                "date_filed": "2021-03-31",
+                "docket_id": "20A-CC-01537",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 2,
+                "as_of": "2021-03-31",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "4624734",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Jason T. Myers v. June Palms Property Management (mem. dec.)",
+                "date_filed": "2019-05-30",
+                "docket_id": "15697242",
+                "precedential_status": "Unpublished",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2019-05-30",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "4469004",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Sharon Thurman and Jeremiah Thurman v. Two Star Inc. (mem. dec.)",
+                "date_filed": "2018-02-19",
+                "docket_id": "6309446",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-19",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "7172813",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Termination the Parent-Child Relationship T.C. v. Ind. Dep't of Child Servs.",
+                "date_filed": "2018-02-19",
+                "docket_id": "64161178",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-19",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "7172814",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Joyce v. State",
+                "date_filed": "2018-02-16",
+                "docket_id": "64161179",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-16",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "7172816",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Bowling v. State",
+                "date_filed": "2018-02-16",
+                "docket_id": "64161181",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-16",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "7172817",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "M.b.-L. v. Ind. Dep't of Child Servs.",
+                "date_filed": "2018-02-16",
+                "docket_id": "64161182",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-16",
+                "code_resolved": true
+              },
+              {
+                "cluster_id": "7172819",
+                "court": "Indiana Court of Appeals",
+                "court_id": "indctapp",
+                "case_name": "Buggs v. State",
+                "date_filed": "2018-02-16",
+                "docket_id": "64161184",
+                "precedential_status": "Published",
+                "has_opinion_text": true,
+                "mention_count": 1,
+                "as_of": "2018-02-16",
+                "code_resolved": true
+              }
+            ],
+            "source": "https://www.courtlistener.com/",
+            "unofficial": true,
+            "disclaimer": "Unofficial copy of the Indiana Code from the Indiana General Assembly's annual download. Not legal advice, not an official publication; it may be incomplete or out of date. Verify against the official source at iga.in.gov.",
+            "source_page": "https://iga.in.gov/laws/ic/downloads",
+            "snapshot_id": "2026-06-23",
+            "snapshot_year": 2026,
+            "compiled_on": "2026-06-23",
+            "data_years": [
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024,
+              2025,
+              2026
+            ],
+            "match_count": 10,
+            "indexed_mention_count": 20,
+            "flags": [
+              "text mentions of this section id in opinion bodies; not a citator; not treatment; not good law",
+              "unofficial CourtListener extract; not legal advice",
+              "20 opinions mention this id; showing 10"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

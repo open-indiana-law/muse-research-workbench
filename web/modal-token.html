@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Set Modal token</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 1.5rem auto; padding: 0 1rem 3rem; }
+    textarea, input, button { font-size: 16px; width: 100%; box-sizing: border-box; margin: 0.4rem 0; padding: 0.8rem; }
+    textarea { min-height: 6rem; }
+    button { background: #14181F; color: #F6F0E2; border: 0; }
+    .note { color: #333; }
+    .warn { background: #F6F0E2; padding: 0.8rem; }
+    #status { min-height: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Set Modal API token</h1>
+  <p class="warn">If you see a black terminal, this is the wrong page. Open this URL in <strong>Safari</strong> (not Telegram’s in-app browser).</p>
+  <p class="note">Paste Modal’s whole <code>modal token set …</code> command in the big box. Or paste Token ID and Token Secret from <a href="https://modal.com/settings/tokens">token settings</a>. Apple Passwords stays the durable copy. Do not send the command in chat.</p>
+  <form id="f" method="post" action="/set-modal-token" enctype="multipart/form-data">
+    <label for="blob">Paste the Modal command</label>
+    <textarea id="blob" name="blob" rows="6" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="modal token set --token-id … --token-secret …"></textarea>
+    <button type="button" id="paste">Paste from clipboard</button>
+    <label for="token_id">Or Token ID only</label>
+    <input id="token_id" name="token_id" type="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="off">
+    <label for="token_secret">Token Secret</label>
+    <input id="token_secret" name="token_secret" type="password" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="off">
+    <button type="submit">Save on this Mac</button>
+    <p id="status"></p>
+  </form>
+  <script>
+    const blob = document.getElementById("blob");
+    const status = document.getElementById("status");
+    document.getElementById("paste").addEventListener("click", async () => {
+      status.textContent = "";
+      try {
+        const text = await navigator.clipboard.readText();
+        if (!text.trim()) {
+          status.textContent = "Clipboard was empty. Copy the Modal command again, then tap Paste.";
+          return;
+        }
+        blob.value = text.trim();
+        status.textContent = "Pasted. Tap Save. The command is not shown back to you later.";
+      } catch (err) {
+        status.textContent = "This browser blocked clipboard. Use Safari, or type the two fields.";
+      }
+    });
+  </script>
+</body>
+</html>

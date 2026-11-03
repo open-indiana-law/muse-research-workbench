@@ -1,0 +1,143 @@
+:root {
+  --cream: #f6f0e2;
+  --ink: #14181f;
+  --dome: #2e8068;
+  --gold: #b3820b;
+  --steps: #8f7e5e;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  max-width: 46rem;
+  padding: 1.5rem;
+  background: var(--cream);
+  color: var(--ink);
+  font: 16px/1.45 "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  overflow-wrap: anywhere;
+}
+header { display: flex; gap: 0.85rem; align-items: center; }
+h1, h2 { margin: 0.15rem 0; font-weight: 650; }
+.eyebrow { margin: 0; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.72rem; color: var(--steps); }
+.banner, .catch {
+  background: #efe4c8;
+  border-left: 4px solid var(--gold);
+  padding: 0.65rem 0.8rem;
+}
+.status { color: var(--dome); }
+label { display: block; margin-top: 0.8rem; font-size: 0.9rem; }
+textarea, input[type="date"] {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.55rem;
+  border: 1px solid var(--steps);
+  background: #fffdf6;
+  color: var(--ink);
+  font: inherit;
+}
+.chips, .voice { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.7rem 0; align-items: center; }
+.chips button, #go, .voice button {
+  background: var(--dome);
+  color: var(--cream);
+  border: 0;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  font: inherit;
+}
+.voice #voice-status { margin: 0; flex: 1 1 16rem; color: var(--steps); font-size: 0.9rem; }
+body.recording #talk, body.recording #stop { background: #8b2e2e; }
+#go { margin-top: 0.4rem; }
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #fffdf6;
+  padding: 0.8rem;
+  border: 1px solid #d8cba8;
+}
+#trace, #cards { padding-left: 1.1rem; }
+#trace li, #cards li { margin: 0.55rem 0; }
+.card {
+  background: #fffdf6;
+  border: 1px solid #d8cba8;
+  padding: 0.7rem 0.8rem;
+  list-style: none;
+}
+.card p { margin: 0.25rem 0; }
+.card .note { color: var(--steps); font-size: 0.88rem; }
+.card a { color: var(--dome); word-break: break-all; }
+#cards { padding-left: 0; }
+code { font-family: ui-monospace, Menlo, monospace; font-size: 0.86em; }
+body.record {
+  max-width: 58rem;
+  font-size: 18px;
+}
+body.record #spend,
+body.record label[for="as_of"],
+body.record #as_of { display: none; }
+body.record #voice-status,
+body.record .voice { display: none; }
+.clock {
+  position: sticky;
+  top: 0.4rem;
+  text-align: right;
+  color: var(--steps);
+  font-variant-numeric: tabular-nums;
+}
+body.record .clock.warn { color: #8b2e2e; }
+
+/* A readable filming view of the same app, without changing research content. */
+body.presentation { max-width: 78rem; font-size: 20px; padding: 2rem; }
+body.presentation form { max-width: 65rem; }
+body.presentation #question { font-size: 1.8rem; line-height: 1.45; }
+body.presentation .chips,
+body.presentation .voice,
+body.presentation #spend,
+body.presentation label[for="as_of"],
+body.presentation #as_of { display: none; }
+body.presentation .note-text { font-size: 1.5rem; line-height: 1.55; }
+body.presentation .research-note { padding: 1.4rem; }
+body.presentation .banner { font-size: .85rem; }
+body.presentation #status { font-size: 1.15rem; }
+body.presentation .source-text { max-height: 30rem; }
+body.presentation .reading-grid:has(.source-reader:not([hidden])) { grid-template-columns: minmax(0, 1fr); }
+body.presentation .reading-grid:has(.source-reader:not([hidden])) .research-note { display: none; }
+body.presentation #source-buttons button { font-size: 1rem; }
+@media (max-width: 700px) {
+  body.presentation { padding: 1rem; font-size: 16px; }
+  body.presentation #question, body.presentation .note-text { font-size: 1.1rem; }
+}
+
+/* Source bodies and model wording remain text, never interpreted markup. */
+[hidden] { display: none !important; }
+body { max-width: 72rem; line-height: 1.6; }
+form { max-width: 48rem; }
+.banner { font: 0.78rem/1.5 system-ui, sans-serif; padding: 0.5rem 0.75rem; }
+.reading-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; margin: 1.75rem 0; }
+.reading-grid:has(.source-reader:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.research-note, .source-reader { min-width: 0; padding: 1.4rem; background: #fffdf6; border: 1px solid #d8cba8; border-radius: 0.35rem; }
+.research-note h2, .source-reader h2 { font-size: 1.55rem; line-height: 1.25; margin-bottom: 1rem; }
+.note-text { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 72ch; font: inherit; line-height: 1.75; }
+.reader-hint { color: #665a42; font: 0.8rem/1.55 system-ui, sans-serif; }
+#opened-sources { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #d8cba8; }
+#opened-sources h3 { font-size: 1rem; margin: 0; }
+#source-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+#source-buttons button, #close-source { cursor: pointer; border: 1px solid var(--dome); border-radius: 0.25rem; background: transparent; color: #235d4d; padding: 0.6rem 0.75rem; font: 0.85rem/1.4 system-ui, sans-serif; text-align: left; overflow-wrap: anywhere; max-width: 100%; }
+#source-buttons button[aria-expanded="true"] { background: var(--dome); color: #fffdf6; }
+button:focus-visible, a:focus-visible, summary:focus-visible, #source-title:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.reader-heading { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: space-between; align-items: center; }
+.reader-heading .eyebrow { color: #665a42; }
+.source-text { max-height: 65vh; overflow-y: auto; padding-right: 0.5rem; }
+#source-title { margin-top: 1rem; }
+#trace-details { margin: 1.5rem 0; padding: 1rem; border: 1px solid #d8cba8; border-radius: 0.35rem; }
+#trace-details summary { cursor: pointer; font: 0.9rem/1.5 system-ui, sans-serif; color: #235d4d; }
+#trace-details pre { font-size: 0.8rem; }
+@media (max-width: 760px) {
+  body, body.record { padding: 1rem; font-size: 16px; }
+  .reading-grid:has(.source-reader:not([hidden])) { grid-template-columns: minmax(0, 1fr); }
+  .research-note, .source-reader { padding: 1rem; }
+  #source-buttons { flex-direction: column; align-items: stretch; }
+  #source-buttons button { width: 100%; }
+  .source-text { max-height: 60vh; }
+}
+
+#summary p { margin: 0 0 1rem; }
+#summary a { color: #235d4d; text-decoration-thickness: 1px; text-underline-offset: 3px; }

@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.DS_Store
+node_modules/
+dist/
+recordings/
+private/
+*.sqlite
+*.db
+*.log
+backups/

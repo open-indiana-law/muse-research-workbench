@@ -1,0 +1,31 @@
+[project]
+name = "indiana-law-muse"
+version = "0.1.0"
+description = "Hackathon companion: typed Muse Spark loop over the hosted Indiana Code MCP."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "mcp==1.30.0",
+  "httpx>=0.28",
+  "fastapi>=0.115",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+modal = ["modal>=1.0"]
+
+[project.scripts]
+indiana-research = "app.cli:main"
+indiana-research-serve = "app.server:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

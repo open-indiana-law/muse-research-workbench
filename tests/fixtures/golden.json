@@ -1,0 +1,26 @@
+[
+  {
+    "id": "statute",
+    "question": "What does IC 31-16-15-25 say about income withholding?",
+    "planner": "statute",
+    "expect_found": true
+  },
+  {
+    "id": "currency",
+    "question": "Did IC 31-16-15-25 change across unofficial snapshots?",
+    "planner": "currency",
+    "expect_found": true
+  },
+  {
+    "id": "horton",
+    "question": "Open Horton and tell me what it cites.",
+    "planner": "caselaw",
+    "expect_found": true
+  },
+  {
+    "id": "bad_cite",
+    "question": "What does IC 99-1-1-1 say?",
+    "planner": "bad_cite",
+    "expect_found": false
+  }
+]

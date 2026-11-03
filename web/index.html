@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Indiana Law</title>
+  <link rel="icon" href="https://mcp.openindianalaw.org/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <img src="https://mcp.openindianalaw.org/icon.svg" alt="" width="48" height="48">
+    <div>
+      <p class="eyebrow">Open Indiana Law · Meta Indie demo</p>
+      <h1>Open Indiana Law</h1>
+    </div>
+  </header>
+  <p class="banner" id="disclaimer">Dated, unofficial sources · Verify official sources and current law · Not legal advice or a citator.</p>
+  <p class="status" id="status">Checking local server…</p>
+  <p class="status" id="spend">Credit balance unverified. Live Muse closed.</p>
+  <p class="clock" id="clock" hidden>3:00 · Start when Screenshot is rolling</p>
+  <form id="form">
+    <div class="voice">
+      <button type="button" id="talk">Talk</button>
+      <button type="button" id="stop" hidden>Stop</button>
+      <button type="button" id="cancel" hidden>Cancel</button>
+      <button type="button" id="speak" hidden>Read aloud</button>
+      <p id="voice-status">Mic is optional. Muse Transcribe is closed until credits. Device speech is not Muse.</p>
+    </div>
+    <label for="question">Typed question</label>
+    <textarea id="question" name="question" rows="3" required maxlength="2000">What does IC 31-16-15-25 say about income withholding?</textarea>
+    <label for="as_of">As-of date (optional)</label>
+    <input id="as_of" name="as_of" type="date">
+    <div class="chips">
+      <button type="button" data-mode="rehearsal" data-q="Can an Indiana tenant lose possession before a jury hears the eviction case? What hearing protections come first?">Eviction rehearsal · no live Muse</button>
+      <button type="button" data-q="Can an Indiana tenant lose possession before a jury hears the eviction case? What hearing protections come first?">Eviction · live Muse when ready</button>
+      <button type="button" data-q="What does IC 31-16-15-25 say about income withholding?">Statute</button>
+      <button type="button" data-q="Did IC 31-16-15-25 change across unofficial snapshots?">Currency</button>
+      <button type="button" data-q="Open Horton and tell me what it cites.">Horton</button>
+      <button type="button" data-q="What does IC 99-1-1-1 say?">Bad cite</button>
+    </div>
+    <button type="submit" id="go">Ask</button>
+  </form>
+  <section id="out" hidden>
+    <div class="reading-grid">
+      <article class="research-note" aria-labelledby="note-title">
+        <p class="eyebrow">Research result</p>
+        <h2 id="note-title">Research note</h2>
+        <p class="catch" id="catch" hidden></p>
+        <div id="summary" class="note-text"></div>
+        <section id="opened-sources" hidden aria-labelledby="opened-title">
+          <h3 id="opened-title">Read the retrieved sources</h3>
+          <p class="reader-hint">Open the text behind this research. Source selection does not certify support for every statement.</p>
+          <div id="source-buttons"></div>
+        </section>
+      </article>
+      <aside id="source-reader" class="source-reader" hidden aria-labelledby="source-title">
+        <div class="reader-heading"><p class="eyebrow">Retrieved source text</p><button type="button" id="close-source">Close source</button></div>
+        <h2 id="source-title" tabindex="-1"></h2>
+        <p id="source-notice" class="reader-hint"></p>
+        <div id="source-text" class="note-text source-text"></div>
+      </aside>
+    </div>
+    <h2>Source cards</h2>
+    <ul id="cards"></ul>
+    <details id="trace-details">
+      <summary>Inspect the tool trace</summary>
+      <p class="reader-hint">Recorded requests and returned evidence; not private model reasoning.</p>
+      <ol id="trace"></ol>
+    </details>
+  </section>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
